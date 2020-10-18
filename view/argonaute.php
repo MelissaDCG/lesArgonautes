@@ -6,7 +6,7 @@ include "./view/header.php";
 <main>
 
     <!-- New member form -->
-    <h2>Ajouter un(e) Argonaute</h2>
+    <h2 class="my-4">Ajouter un(e) Argonaute</h2>
     <div class="d-flex justify-content-center">
         <div class="card w-75">
             <div class="card-body">
@@ -16,7 +16,7 @@ include "./view/header.php";
                         <div class="col-sm-6">
                             <input id="name" class="form-control" name="name" type="text" placeholder="Charalampos" pattern="[A-Za-z]{2,50}" required />
                         </div>
-                        <button type="submit" class="btn btn-danger my-2 my-sm-0">Envoyer</button>
+                        <button type="submit" class="btn btn-danger bg-wcs my-2 my-sm-0">Envoyer</button>
                     </div>      
                 </form>
             </div>
@@ -24,16 +24,24 @@ include "./view/header.php";
     </div> 
      
     <!-- Member list -->
-    <h2 class="my-4">Membres de l'équipage</h2>
-    <section class="member-list my-2">
-        <ul>
-        <?php     
-            foreach ( $argonautes as $argonaute ) {
-            ?>
-            <li class="member-item"><?=htmlspecialchars($argonaute->getName())?></li>
-            <?php } ?>   
-        </ul>
-    </section>
+    <div class="card my-4">
+        <div class="card-header bg-wcs">
+            <h2 class="my-2 text-white">Membres de l'équipage</h2>
+        </div>
+        <div class="card-body">
+            <section class="member-list my-2">
+                <ul>
+                <?php     
+                    foreach ( $argonautes as $argonaute ) {
+                    ?>
+                    <li class="member-item mr-4"><?=htmlspecialchars($argonaute->getName())?></li>
+                    <?php } ?>   
+                </ul>
+            </section>
+        </div>
+    </div>
+    
+    
 </main>
 <?php
 include "./view/footer.php";

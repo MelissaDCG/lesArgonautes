@@ -11,7 +11,9 @@ main {
 }
 
 header {
-  background: #f4f4f4;
+  background-image: url("../img/water.jpg");
+  background-size: cover;
+  background-color: #f4f4f4;
   text-align: center;
   padding: 2em;
 }
@@ -47,6 +49,10 @@ li {
 
 .member-item {
   padding: 0.25em 0;
+}
+
+.bg-wcs {
+  background-color: #f76c6c;
 }
 
 footer {
