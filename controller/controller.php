@@ -1,7 +1,7 @@
 <?php
     function loadClass($class)
     {
-        require 'module/'. $class . '.php';
+        require './module/'. $class . '.php';
     }
 
     spl_autoload_register('loadClass');

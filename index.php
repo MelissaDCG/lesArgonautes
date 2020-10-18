@@ -8,7 +8,7 @@
             }
         }
         $argonautes = showList();
-        include "view/argonaute.php";
+        include "./view/argonaute.php";
         
     }
     catch(Exception $e) {
